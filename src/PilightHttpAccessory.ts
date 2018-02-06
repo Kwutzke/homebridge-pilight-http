@@ -77,20 +77,5 @@ export class PilightHttpAccessory {
                 callback(error);
         })
     }
-
-
-    // fetch(this.stateUrl)
-    //     .then(response => {
-    //         const devicesJson = response.json()
-    //             .then(json => {
-    //                 const state = json.devices[this.deviceName].state;
-    //                 callback(null, state);
-    //                 this.log('State is: %s', state === 'on');
-    //             });
-    //     }).catch(error => {
-    //     this.log('Get state failed: %s', error.message);
-    //     callback(error, false)
-    // })
-
 }
 
