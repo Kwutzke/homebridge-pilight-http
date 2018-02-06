@@ -15,6 +15,7 @@ export class PilightHttpAccessory {
     private baseUrl: string;
     private stateUrl: string;
     private powerUrl: string;
+    private name: string;
 
 
     constructor(log: Log, config: Config) {
@@ -23,6 +24,7 @@ export class PilightHttpAccessory {
         this.port = config.port;
         this.type = config.type;
         this.deviceName = config.deviceName;
+        this.name = config.name;
         this.baseUrl = 'http://' + this.host + ':' + this.port;
         this.stateUrl = this.baseUrl + '/' + 'config';
         this.powerUrl = this.baseUrl + '/control?device=' + this.deviceName + '&state=';
@@ -33,11 +35,11 @@ export class PilightHttpAccessory {
     private instantiateServices() {
         this.informationService = new Service.AccessoryInformation();
         this.informationService
-            .setCharacteristic(Characteristic.Manufacturer, "Test Manufacturer")
-            .setCharacteristic(Characteristic.Model, "Test Model")
+            .setCharacteristic(Characteristic.Manufacturer, "Muster Manufacturer")
+            .setCharacteristic(Characteristic.Model, "Muster Model")
             .setCharacteristic(Characteristic.SerialNumber, "123-456-789");
 
-        this.service = new Service.Switch("my switch");
+        this.service = new Service.Switch(this.name);
         this.service
             .getCharacteristic(Characteristic.On)
             .on('get', this.getPowerState.bind(this))

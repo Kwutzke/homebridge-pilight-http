@@ -16,6 +16,7 @@ var PilightHttpAccessory = /** @class */ (function () {
         this.port = config.port;
         this.type = config.type;
         this.deviceName = config.deviceName;
+        this.name = config.name;
         this.baseUrl = 'http://' + this.host + ':' + this.port;
         this.stateUrl = this.baseUrl + '/' + 'config';
         this.powerUrl = this.baseUrl + '/control?device=' + this.deviceName + '&state=';
@@ -24,10 +25,10 @@ var PilightHttpAccessory = /** @class */ (function () {
     PilightHttpAccessory.prototype.instantiateServices = function () {
         this.informationService = new index_1.Service.AccessoryInformation();
         this.informationService
-            .setCharacteristic(index_1.Characteristic.Manufacturer, "Test Manufacturer")
-            .setCharacteristic(index_1.Characteristic.Model, "Test Model")
+            .setCharacteristic(index_1.Characteristic.Manufacturer, "Muster Manufacturer")
+            .setCharacteristic(index_1.Characteristic.Model, "Muster Model")
             .setCharacteristic(index_1.Characteristic.SerialNumber, "123-456-789");
-        this.service = new index_1.Service.Switch("my switch");
+        this.service = new index_1.Service.Switch(this.name);
         this.service
             .getCharacteristic(index_1.Characteristic.On)
             .on('get', this.getPowerState.bind(this))
