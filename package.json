@@ -1,0 +1,28 @@
+{
+  "name": "homebridge-pilight-http",
+  "version": "1.0.0",
+  "description": "hombridge plugin to control pilight over the rest api",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "homebridge",
+    "homebridge-plugin",
+    "homebridge-pilight-http"
+  ],
+  "engines": {
+    "node": ">=9.4.0",
+    "homebridge": ">=0.2.0"
+  },
+  "author": "Kilian Wutzke",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^9.4.0",
+    "@types/request": "^2.47.0",
+    "typescript": "^2.7.1"
+  },
+  "dependencies": {
+    "web-request": "^1.0.7"
+  }
+}
