@@ -1,6 +1,6 @@
 {
   "name": "homebridge-pilight-http",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "hombridge plugin to control accessories over pilights the rest api",
   "main": "dist/index.js",
   "scripts": {
