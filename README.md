@@ -3,8 +3,8 @@ working stable, but the features are limited.
 At this point of development you can register and
 control pilight switches and read their states.*
 
-*For future release it is planned, to implement the type 'switch' with
-brightness control and the registration as a platform, with automated
+*For future release it is planned, to implement the type 'lamp' with
+brightness control and registration as a platform, with automated
 config read*
 # hombridge-pilight-http
 Homebridge plugin to control lights and switches over the pilight rest
